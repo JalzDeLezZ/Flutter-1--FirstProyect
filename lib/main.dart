@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review_list.dart';
+import 'gradient_back.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,15 +28,21 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-            appBar: AppBar(
-              title: Text("Happy Hello World"),
-            ),
-            body: new DescriptionPlace(
-              "James Jalz",
-              4,
-              "Sint enim eu laborum fugiat reprehenderit consequat commodo ad ex pariatur deserunt. Tempor eu veniam tempor esse. Ut nulla qui elit amet eiusmod mollit ut consectetur amet culpa cupidatat.",
-            )) // const MyHomePage(title: 'Flutter Demo Home Page'),
-        );
+          // body: new DescriptionPlace(  "James Jalz",  4,  "Sint enim eu laborum fugiat reprehenderit consequat commodo ad ex pariatur deserunt. Tempor eu veniam tempor esse. Ut nulla qui elit amet eiusmod mollit ut consectetur amet culpa cupidatat.",)) // const MyHomePage(title: 'Flutter Demo Home Page'),
+          // body: ReviewList()),
+          body: Stack(
+            children: <Widget>[
+              ListView(
+                children: <Widget>[
+                  DescriptionPlace("James Jalz", 4,
+                      "Sint enim eu laborum fugiat reprehenderit consequat commodo ad ex pariatur deserunt. Tempor eu veniam tempor esse. Ut nulla qui elit amet eiusmod mollit ut consectetur amet culpa cupidatat."),
+                  ReviewList(),
+                ],
+              ),
+              GradientBack()
+            ],
+          ),
+        ));
   }
 }
 

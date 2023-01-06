@@ -90,6 +90,10 @@ flutter:
 
   assets:
     - assets/img/figure1.jpg
+    - assets/img/figure2.jpg
+    - assets/img/figure3.jpg
+    - assets/img/figure4.jpg
+    - assets/img/figure5.jpg
 
   fonts:
     - family: Lato

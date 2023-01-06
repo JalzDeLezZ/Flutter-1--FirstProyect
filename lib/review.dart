@@ -4,12 +4,55 @@ import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget {
   String pathImg = "assets/img/figure1.jpg";
+  String name = "James Jalz";
+  String details = "1 review 5 photos";
+  String comments = "There is an amazing place in Sri Lanka";
 
-  Review(this.pathImg);
+  Review(this.pathImg, this.name, this.details, this.comments);
 
   @override
   Widget build(BuildContext context) {
     // All: implement build
+
+    final userComment = Container(
+        margin: EdgeInsets.only(left: 20.0),
+        child: Text(
+          comments,
+          textAlign: TextAlign.left,
+          style: TextStyle(
+            fontFamily: "Lato",
+            fontSize: 13.0,
+            fontWeight: FontWeight.w900,
+          ),
+        ));
+
+    final userInfo = Container(
+        margin: EdgeInsets.only(left: 20.0),
+        child: Text(
+          details,
+          textAlign: TextAlign.left,
+          style: TextStyle(
+            fontFamily: "Lato",
+            fontSize: 13.0,
+            color: Color(0xFFa3a5a7),
+          ),
+        ));
+
+    final userName = Container(
+        margin: EdgeInsets.only(left: 20.0),
+        child: Text(
+          name,
+          textAlign: TextAlign.left,
+          style: TextStyle(
+            fontFamily: "Lato",
+            fontSize: 17.0,
+          ),
+        ));
+
+    final userDetails = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[userName, userInfo, userComment],
+    );
 
     final photo = Container(
       margin: EdgeInsets.only(
@@ -24,6 +67,6 @@ class Review extends StatelessWidget {
               DecorationImage(fit: BoxFit.cover, image: AssetImage(pathImg))),
     );
 
-    return Row(children: <Widget>[]);
+    return Row(children: <Widget>[photo, userDetails]);
   }
 }
