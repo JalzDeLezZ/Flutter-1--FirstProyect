@@ -1,6 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget {
+  String pathImg = "assets/img/figure1.jpg";
+
+  Review(this.pathImg);
+
   @override
   Widget build(BuildContext context) {
     // All: implement build
@@ -12,7 +18,10 @@ class Review extends StatelessWidget {
       ),
       width: 80.0,
       height: 80.0,
-      decoration: BoxDecoration(shape: BoxShape.circle),
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image:
+              DecorationImage(fit: BoxFit.cover, image: AssetImage(pathImg))),
     );
 
     return Row(children: <Widget>[]);
