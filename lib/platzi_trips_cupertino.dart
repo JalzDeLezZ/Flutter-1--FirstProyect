@@ -19,7 +19,13 @@ class NavigationBarCupertinoIos extends StatelessWidget {
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
               BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
-              BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                /* activeIcon: Icon(
+                    Icons.star,
+                    color: Color(0xFFFFCC00),
+                  ) */ // @@@ This icon is active when the tab is selected
+              ),
             ]),
         tabBuilder: (BuildContext context, int index) {
           switch (index) {
