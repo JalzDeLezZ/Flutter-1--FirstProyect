@@ -89,11 +89,8 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/img/figure1.jpg
-    - assets/img/figure2.jpg
-    - assets/img/figure3.jpg
-    - assets/img/figure4.jpg
-    - assets/img/figure5.jpg
+    - assets/img/
+    - assets/img/gif1.gif
 
   fonts:
     - family: Lato

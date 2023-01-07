@@ -1,10 +1,16 @@
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/header_appbar.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 import 'gradient_back.dart';
 
 void main() {
   runApp(const MyApp());
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -39,7 +45,8 @@ class MyApp extends StatelessWidget {
                   ReviewList(),
                 ],
               ),
-              GradientBack()
+              // GradientBack("Popular")
+              HeaderAppBar()
             ],
           ),
         ));
