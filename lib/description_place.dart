@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'buttom.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String namePlace;
@@ -75,10 +75,8 @@ class DescriptionPlace extends StatelessWidget {
       ),
     );
     return Column(
-      children: <Widget>[
-        titleStarts,
-        description,
-      ],
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[titleStarts, description, ButtonPurple("Navigate")],
     );
   }
 }
