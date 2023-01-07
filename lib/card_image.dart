@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
+import 'floating_action_button.dart';
 
 class CardImage extends StatelessWidget {
   String pathImage = "assets/img/picture1.jpg";
@@ -24,6 +27,12 @@ class CardImage extends StatelessWidget {
                 offset: Offset(0.0, 7.0))
           ],
         ));
-    return card;
+    return Stack(
+      alignment: Alignment(0.9, 1.1),
+      children: <Widget>[
+        card,
+        FloatingActionButtonGreen(),
+      ],
+    );
   }
 }
